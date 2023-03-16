@@ -1,11 +1,11 @@
 pipeline {
     agent any
-    environment {
+//     environment {
 //           IMAGE_TAG = sh(returnStdout: true, script: 'cat /mad-version/mad-backend').trim()
 //           JAR_VERSION = sh(returnStdout: true, script: """
 //           grep \"VERSION_NAME\" version.properties | awk -F\"=\" \'{print \$2}\'| awk -F. -v OFS=. \'NF==1{print ++\$NF}; NF>1{if(length(\$NF+1)>length(\$NF))\$(NF-1)++; \$NF=sprintf(\"%0*d\", length(\$NF), (\$NF+1)%(10^length(\$NF))); print}'
 //           """).trim()
-    }
+//     }
     stages {
           stage('SCM') {
               steps {
